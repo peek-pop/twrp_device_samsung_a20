@@ -5,17 +5,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# VNDK
-PRODUCT_TARGET_VNDK_VERSION := 30
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
-
-# API
-PRODUCT_SHIPPING_API_LEVEL := 28
-
-# Dynamic partitions
-PRODUCT_ENFORCE_PRODUCT_PARTITION_INTERFACE := true
-PRODUCT_PRODUCT_VNDK_VERSION := current
-
 # fastbootd
 PRODUCT_PACKAGES += \
 	android.hardware.fastboot@1.0-impl-mock \
