@@ -16,6 +16,9 @@
 
 LOCAL_PATH := device/samsung/a20
 
+# For building with minimal manifest
+ALLOW_MISSING_DEPENDENCIES := true
+
 # OTA Assert
 TARGET_OTA_ASSERT_DEVICE := a20,a20dd
 
@@ -138,6 +141,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_NEW_MINADBD := true
 TW_NO_LEGACY_PROPS := true
 TW_USE_TOOLBOX := true
+TW_SCREEN_BLANK_ON_BOOT := true
+TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/kernel/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
 
 # Display
@@ -153,9 +158,8 @@ TWRP_EVENT_LOGGING := true
 
 # Tools
 TW_INCLUDE_PYTHON := true
-TW_INCLUDE_LPDUMP := true
-TW_INCLUDE_LPTOOLS := true
-TW_INCLUDE_FASTBOOTD := true
+TW_EXCLUDE_LPTOOLS := true
+TW_EXCLUDE_LPDUMP := true
 
 # LZMA Compression
 LZMA_COMPRESSION := -9
