@@ -1,13 +1,10 @@
 LOCAL_PATH := device/samsung/a20
 
-# Fastbootd
+# fastbootd
 PRODUCT_PACKAGES += \
-	fastbootd \
 	android.hardware.fastboot@1.0-impl-mock \
-	android.hardware.fastboot@1.0-impl-mock.recovery
-
-PRODUCT_PRODUCT_PROPERTIES += \
-	ro.fastbootd.available=true
+	android.hardware.fastboot@1.0-impl-mock.recovery \
+	fastbootd
 
 # bootctrl
 PRODUCT_PACKAGES += \
@@ -22,5 +19,4 @@ PRODUCT_PACKAGES += \
 
 # Hide Reflash TWRP & FUSE passthrough
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.twrp.vendor_boot=true \
-    persist.sys.fuse.passthrough.enable=true
+    persist.sys.fuse.passthrough.enable=:= true	
