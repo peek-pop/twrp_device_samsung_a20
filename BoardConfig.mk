@@ -122,6 +122,7 @@ VENDOR_SECURITY_PATCH := 2023-03-01
 
 # TWRP specific build flags
 RECOVERY_SDCARD_ON_DATA := true
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
